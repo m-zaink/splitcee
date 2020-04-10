@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Landing-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Splitcee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Landing" id="BYZ-38-t0r" customClass="SplitInputViewController" customModule="Splitcee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,9 +54,6 @@
                                                         </segments>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <connections>
-                                                            <action selector="splitChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1oj-TV-9Zx"/>
-                                                        </connections>
                                                     </segmentedControl>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Split" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuJ-Xt-KUh">
                                                         <rect key="frame" x="0.0" y="135.33333333333334" width="375" height="20.333333333333343"/>
@@ -113,12 +110,12 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J73-bE-G4Y">
-                                <rect key="frame" x="62.666666666666657" y="708" width="249.99999999999997" height="50"/>
+                                <rect key="frame" x="62.666666666666657" y="701" width="249.99999999999997" height="57"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="XRn-71-Br8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="32"/>
                                 <state key="normal" title="CALCULATE">
                                     <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -150,7 +147,7 @@
                     <connections>
                         <outlet property="billAmountTextField" destination="7dS-PD-2Hr" id="w9e-Tz-DlH"/>
                         <outlet property="peopleCountLabel" destination="CqA-Ye-hDT" id="bZ4-8c-8LL"/>
-                        <outlet property="splitSegment" destination="r5h-iI-Aq6" id="D5P-hZ-pkL"/>
+                        <outlet property="tipSegmentedControl" destination="r5h-iI-Aq6" id="D5P-hZ-pkL"/>
                         <segue destination="Dad-h8-of2" kind="presentation" identifier="showSplit" id="3dH-tQ-ONv"/>
                     </connections>
                 </viewController>
@@ -163,22 +160,22 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--Split-->
         <scene sceneID="Fwe-Xn-cpo">
             <objects>
-                <viewController id="Dad-h8-of2" sceneMemberID="viewController">
+                <viewController title="Split" id="Dad-h8-of2" customClass="SplitOutputViewController" customModule="Splitcee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lEA-OJ-kDK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hoH-6P-nPD">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hoH-6P-nPD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="716"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6x8-jh-M0T" userLabel="Split View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="358"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="3tK-Ih-ohv">
-                                                <rect key="frame" x="106.33333333333333" y="130.33333333333334" width="162.66666666666669" height="97.333333333333343"/>
+                                                <rect key="frame" x="106.33333333333333" y="51.333333333333336" width="162.66666666666669" height="97.333333333333314"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split Per Person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWY-40-nfU">
                                                         <rect key="frame" x="0.0" y="0.0" width="162.66666666666666" height="28.666666666666668"/>
@@ -187,7 +184,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjW-id-P93">
-                                                        <rect key="frame" x="46.000000000000021" y="51.666666666666657" width="70.333333333333314" height="45.666666666666657"/>
+                                                        <rect key="frame" x="46.000000000000021" y="51.666666666666671" width="70.333333333333314" height="45.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -199,13 +196,14 @@
                                         <constraints>
                                             <constraint firstItem="3tK-Ih-ohv" firstAttribute="centerY" secondItem="6x8-jh-M0T" secondAttribute="centerY" id="pQH-Xq-vuH"/>
                                             <constraint firstItem="3tK-Ih-ohv" firstAttribute="centerX" secondItem="6x8-jh-M0T" secondAttribute="centerX" id="qrK-rR-3ee"/>
+                                            <constraint firstAttribute="height" constant="200" id="tln-BQ-xpC"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYb-9Q-BIQ" userLabel="Split Description View">
-                                        <rect key="frame" x="19.333333333333343" y="358" width="336.66666666666663" height="358"/>
+                                        <rect key="frame" x="0.0" y="200" width="375" height="516"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 3 people, with 20% tip." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZz-zt-1o5">
-                                                <rect key="frame" x="20" y="20" width="296.66666666666669" height="100"/>
+                                                <rect key="frame" x="20" y="20" width="335" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="xq2-ub-Sy7"/>
                                                 </constraints>
@@ -229,12 +227,12 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2Z-fS-61y">
-                                <rect key="frame" x="62.666666666666657" y="644" width="249.99999999999997" height="50"/>
+                                <rect key="frame" x="62.666666666666657" y="637" width="249.99999999999997" height="57"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Svh-2r-pV1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="32"/>
                                 <state key="normal" title="RECALCULATE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -243,6 +241,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recalculateButtonPressed:" destination="Dad-h8-of2" eventType="touchUpInside" id="v3H-7U-JCq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -256,6 +257,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s03-1Y-DSl"/>
                     </view>
+                    <connections>
+                        <outlet property="splitDescriptionLabel" destination="gZz-zt-1o5" id="BCH-MX-Wgk"/>
+                        <outlet property="splitPerPersonLabel" destination="BjW-id-P93" id="tcZ-1Q-pEk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqW-wT-fa6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
